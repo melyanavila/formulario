@@ -1,0 +1,23 @@
+
+body{
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form{
+    width: 450px;
+    height: 350px;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 40px;
+}
+
+.form-input{
+    margin-bottom: 10px;
+}
