@@ -1,3 +1,5 @@
+Primer ejercicio en clase.
+
 <section class="form-container">
     <form class="form" name="formulario" method="get">
 		<h1>Registro</h1><br>
