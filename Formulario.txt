@@ -1,0 +1,138 @@
+<section class="form-container">
+    <form class="form" name="formulario" method="get">
+		<h1>Registro</h1><br>
+        <input type="text" class="form-control form-input" placeholder="" name="myname" id="myname">
+        <label for="myname">Nombre completo</label>
+        <p class="mensajeError"></p>
+        <input type="email" class="form-control form-input" placeholder="" name="email" id="email">
+        <label for="email">Correo electrónico</label>
+        <p class="mensajeError"></p>
+        <input type="password" class="form-control form-input" placeholder="" name="password" id="password">
+        <label for="password">Contraseña</label>
+        <p class="mensajeError"></p>
+
+        <div class="terminos">
+            <input type="checkbox" name="checkbox" id="terminosycondiciones">
+            <label for="terminosycondiciones">He leído y acepto <a href="#">Terminos y Condiciones</a></label>
+            <p class="mensajeError"></p>
+        </div>
+
+        <button class="btn btn-primary" type="submit" value="enviar" id="btn-enviar"> Enviar </button>
+        <p></p>
+
+        <p><a href="#">¿Ya tengo Cuenta?</a></p>
+
+    </form>
+   </section>
+	
+	
+	CSS
+	
+	body{
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200vh;
+}
+
+.form{
+    width: 450px;
+    height: 550px;
+    background-color: beige;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+}
+
+.form-input{
+    margin-bottom: 10px;
+}
+
+.terminos{
+    margin-top: 20px;
+}
+
+.btn-primary{
+    margin-top: 20px;
+}
+
+p{
+    margin-top: 20px;
+}
+
+.mensajeError {
+    color: var(--error);
+    margin-top: 0px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+  
+.mensajeCorrecto {
+    text-align: center;
+    font-weight: bold;
+}
+
+javascript
+
+var formulario = document.getElementById("form")
+var formMyname = document.getElementById("myname");
+var formEmail = document.getElementById("email");
+var formPassword = document.getElementById("password");
+var formCheckbox = document.getElementsByName("checkbox");
+var  boton = document.getElementById('btn-enviar');
+
+var validarNombre = function(e){
+  if (formMyname.value == 0){
+    alert('Completa el campo Nombre');
+    e.preventDefault();
+  }
+};
+
+var validar1 = function(e){
+  validarNombre(e);
+}
+
+var validarCorreo = function(e){
+  if (formEmail.value == 0){
+    alert('Completa el campo con un correo válido');
+    e.preventDefault();
+  }
+};
+
+var validar1 = function(e){
+  validarCorreo(e);
+}
+
+var validarContrasena = function(e){
+  if (formPassword.value == 0){
+    alert('Completa el campo con una contraseña de 8 a 16 caracteres');
+    e.preventDefault();
+  }
+};
+
+var validar2 = function(e){
+  validarContrasena(e);
+}
+
+var validarCheck = function(e){
+  if(formCheckbox.checked == true){                
+    }else{
+      alert("Completa el check de Términos y Condiciones");
+      e.preventDefault();
+    }
+};
+
+var validar3 = function(e){
+  validarCheck(e);
+}
+
+
+boton.addEventListener("enviar", validar1);
+boton.addEventListener("enviar", validar2);
+boton.addEventListener("enviar", validar3);
+

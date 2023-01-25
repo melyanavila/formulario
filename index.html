@@ -10,33 +10,111 @@
     <script src="index.js"></script>
 </head>
 <body>
-   <section class="form-container">
-    <form class="form">
-        <input type="text" class="form-control form-input" placeholder="Nombre" id="user">
-        <input type="email" class="form-control form-input" placeholder="Correo electrónico" id="email">
-        <input type="password" class="form-control form-input" placeholder="Contraseña" id="password">
-        
-        <div class="d-grid gap-2">
-            <button class="btn btn-primary" type="button" onclick="ingresar()">Enviar</button>
-        </div>
-    </form>
-   </section>
 
-   <footer>
-    <div class="ft-container">
-        <div class="diseñador">
-            <img src="img/logo-fondo-blanco (1).png" width="60px" height="60px">
-            <h4> Diseñado por: Yáñez y Guzmán Consultores</h4>
+    <main class="form-container">
+        <!-- FORMULARIO -->
+        <form action="#" class="formulario" id="formulario">
+            <h1>Registro</h1>
+                
+        <!-- GRUPO DE USUARIO -->
+        <div class="formulario__grupo" id="grupo__usuario">
+            <label class="formulario__label">Nombre de usuario</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El nombre de usuario debe tener mínimo 4 caracteres y solo se admiten números, letras y guión bajo.</p>
         </div>
-        <div class="redes">
+        
+        
+        <!-- GRUPO DE NOMBRE-->
+        <div class="formulario__grupo" id="grupo__nombre">
+            <label class="formulario__label">Nombre completo</label>
+            <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El nombre debe tener minimo 4 caracteres y solo se admiten números, letras y guión bajo.</p>
+                </div>
+        
+        
+        <!-- GRUPO DE CONTRASEÑA 1-->
+        <div class="formulario__grupo" id="grupo__password">
+            <label class="formulario__label">Contraseña</label>
+            <div class="formulario__grupo-input">
+                <input type="password" class="formulario__input" name="password" id="password" placeholder="">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">La contraseña debe ser de 4 a 12 dígitos</p>
+        </div>
+        
+        
+        <!-- GRUPO DE CONTRASEÑA 2-->
+        <div class="formulario__grupo" id="grupo__password2">
+            <label class="formulario__label">Repetir la contraseña</label>
+            <div class="formulario__grupo-input">
+                <input type="password" class="formulario__input" name="password2" id="password2">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">La contraseña no coincide</p>
+        </div>
+        
+        
+        <!-- GRUPO DE EMAIL -->
+        <div class="formulario__grupo" id="grupo__correo">
+            <label class="formulario__label">Correo Electrónico</label>
+            <div class="formulario__grupo-input">
+                <input type="email" class="formulario__input" name="correo" id="correo" placeholder="">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El correo debe tener mÍnimo 4 caracteres y sólo se admiten números, letras y guión bajo.</p>
+        </div>
+        
+        
+        <!-- GRUPO DE TELÉFONO -->
+        <div class="formulario__grupo" id="grupo__telefono">
+            <label class="formulario__label">Teléfono</label>
+            <div class="formulario__grupo-input">
+                <input type="telefono" class="formulario__input" name="telefono" id="telefono" placeholder="">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El número debe tener 10 digitos</p>
+        </div>
+        
+        
+        <!-- GRUPO TERMINOS Y CONDICIONES -->
+        <div class="formulario__grupo formulario__grupo-terminos" id="grupo__terminos">
+            <label class="formulario__label">
+                <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                <b class="formulario__span">Acepto los terminos y condiciones</b>
+            </label>
+        </div>
+        
+        <!-- MENSAJE DE CAMPOS REQUERIDOS -->
+        <div class="formulario__mensaje" id="formulario__mensaje">
+            <p><i class="fas fa-exclamation-circle"> <b>Error:</b> Debes completar todos los campos</i></p>
+        </div>
+        
+        
+        <!-- GRUPO ENVIAR -->
+        <div class="formulario__grupo formulario__grupo-btn-enviar">
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">El formulario se envió correctamente</p>
+            <input class="formulario__btn" type="submit" value="Enviar">
+        </div>
+            </form>
+        </main>
+        
+<footer>
+    <div class="ft-container">
+            <div class="redes">
             <div class="sociales">
-            <img src="img/facebook.png" width="20px" height="20px">
+            <a href="https://facebook.com/yanezyguzman"><img src="img/facebook.png" width="30px" height="30px"></a>
             </div>
             <div class="sociales">
-            <img src="img/instagram.png" width="20px" height="20px">
+            <img src="img/instagram.png" width="30px" height="30px">
             </div>
             <div class="sociales">
-            <img src="img/tik-tok.png" width="20px" height="20px">
+            <img src="img/tik-tok.png" width="30px" height="30px">
             </div>
               <!-- href="https://www.flaticon.es/iconos-gratis/facebook" title="facebook iconos">Facebook iconos creados por Freepik - Flaticon
             href="https://www.flaticon.es/iconos-gratis/facebook" title="facebook iconos">Facebook iconos creados por Freepik - Flaticon
@@ -45,15 +123,18 @@
         </div>
         <div class="men">
             <div class="foot">
-                <h5>Contacto</h5>
+                <h6>Contacto</h6>
             </div>
-            <div class=""foot">
-                <h5>Solicitud de servicios</h5>
+            <div class="foot">
+                <h6>Solicitud de servicios</h6>
             </div>
             <div>
-                <h5>Poliítica de privacidad</h5>
+                <h6>Términos y condiciones</h6>
             </div>
         </div>
+    </div>
+    <div class="diseñador">
+        <p> Diseñado por: Melina Lizbeth Yáñez Ávila para Yáñez y Guzmán Consultores<p>
     </div>
 </footer>
 
